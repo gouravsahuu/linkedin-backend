@@ -12,6 +12,11 @@ app.use(express.json());
 app.use("/users",userRoute);
 app.use("/posts",postRoute);
 
+
+app.get("/",(req,res) => {
+    res.send("Backend Homepage");
+})
+
 app.listen(port, async () => {
     try{
         await connection;
